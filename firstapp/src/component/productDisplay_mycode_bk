@@ -1,0 +1,19 @@
+import React, { Fragment } from 'react';
+
+const Product = (props) => {
+    console.log(props.prodData);
+    return(
+        <Fragment>
+        {props.prodData.map((elem)=>{
+            return (
+            <div key={elem.id} style={{border:'1px solid #ccc',width:'30%',float:'left'}}>
+                <h3>{elem.brand}</h3>
+                <h3>{elem.description}</h3>
+            </div>   
+            ) 
+        })}
+        </Fragment>
+    )
+}
+
+export default Product;
