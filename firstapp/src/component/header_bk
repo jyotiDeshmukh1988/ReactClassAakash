@@ -1,11 +1,21 @@
 import React,{Component} from 'react';
-import './Header.css';
+
 class Header extends Component { // we extends component becoz it provides the render method
     render(){
+        const myStyle ={
+            header:{
+                backgroundColor:'tomato'
+            },
+            logo:{
+                textAlign:'center',
+                fontSize:'30px',
+                color:'white'
+            }
+        }
         return(
             <React.Fragment>
-            <header>{/* single curly braces becoz its a property object*/}
-                <div className='logo'>React App</div>
+            <header style={myStyle.header}>{/* single curly braces becoz its a property object*/}
+                <div style={myStyle.logo}>React App</div>
                 <center>
                     <input/>
                     <div style={{color:'white',fontSize:'20px'}}>user text here</div>{/* double curly braces becoz its a property*/}
