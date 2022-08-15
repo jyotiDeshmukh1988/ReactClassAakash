@@ -1,0 +1,29 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter,Route,Link } from 'react-router-dom';
+import Header from './component/Header';
+import Footer from './component/Footer';
+import Post from './component/Post';
+import Profile from './component/Profile';
+import Home from './component/Home';
+
+const App = () => {
+    return(
+        <BrowserRouter>
+            <Header/>
+            <Link to="/">Home</Link>
+            <Link to="/post">Post</Link>
+            <Link to="/profile">Profile</Link>
+            <Route exact path="/" component={Home}/>
+            <Route path="/post" component={Post}/>
+            <Route path="/profile" component={Profile}/>
+            <Footer/>
+        </BrowserRouter>
+    )
+}
+/* 
+We can write Header component and Link component inside the BrowserRouter component it will not create error but not recommended also we have to use LINK tag for navigation to prevent from the page load.
+*/
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<App/>);
