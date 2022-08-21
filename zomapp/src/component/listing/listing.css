@@ -59,11 +59,26 @@
     text-align: left;
     color: #192f60;
 }
-
 .rating {
     line-height: 5.4;
 }
-
 .labelDiv{
-    margin-top:5%
+    margin-top:5%;
+    font-size:25px;
+}
+span#mealtype_id2 {
+    margin-left: 15px;
+    margin-top: 10px; 
+    background-color: #5cb85c;
+}
+span#mealtype_id6 {
+    margin-top: 10px;
+    background-color: #5cb85c;
+}
+span#cuisine_id1,span#cuisine_id3 {
+    margin-right: 15px;
+     background-color:#f0ad4e;
+}
+span#cuisine_id2,span#cuisine_id4 {
+background-color: #5bc0de;
 }
