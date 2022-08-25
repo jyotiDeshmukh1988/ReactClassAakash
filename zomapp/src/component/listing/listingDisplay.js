@@ -2,13 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const ListingDisplay = (props) =>{
-    
+   
     const renderData = ({listData}) => {
         if(listData){
             if(listData.length > 0){
                 return listData.map((item)=>{
                     return (
-                        <div className="item">
+                        <div className="item" key={item._id}>
                         <div className="row">
                             <div className="col-md-5">
                                 <img src={item.restaurant_thumb} className="Image"

@@ -1,6 +1,10 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import './details.css';
+import { Link } from 'react-router-dom';
+import MenuDisplay from './menuDisplay';
 
 const url = "http://zomatoajulypi.herokuapp.com/details"
 const menuUrl = "https://zomatoajulypi.herokuapp.com/menu"
@@ -11,10 +15,21 @@ class Details extends Component {
         super(props);
         this.state ={
             details:'',
-            menuList:''
+            menuList:'',
+            mealId:sessionStorage.getItem('mealId')?sessionStorage.getItem('mealId'):1,
+            userItem:''
         }
     }
-   
+    
+    addToCart = (data) => {
+        this.setState({userItem:data})
+    }
+
+    proceed =() => {
+        sessionStorage.setItem('menu',this.state.userItem);
+        this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
+    }
+
     render(){
         //let details = this.state.details; // => if set and get variables name are same for eg {details} in this case you can use below approach
         let {details} = this.state;
@@ -42,6 +57,27 @@ class Details extends Component {
                             </div>
                         </div>
                     </div>
+                    <Tabs>
+                        <TabList>
+                            <Tab>About</Tab>
+                            <Tab>Contact</Tab>
+                        </TabList>
+
+                        <TabPanel>
+                            <h2>{details.restaurant_name}</h2>
+                            <p>{details.restaurant_name} Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        </TabPanel>
+                        <TabPanel>
+                            <h2>{details.address}</h2>
+                            <h3>Phone: {details.contact_number}</h3>
+                        </TabPanel>
+                    </Tabs>
+                    <Link to={`/listing/${this.state.mealId}`} className='btn btn-danger'>Back</Link>&nbsp;
+                    <button className="btn btn-success" onClick={this.proceed}>Proceed</button>
+                </div>
+                <div className='col-md-12 mt-5'>
+                    <h2>Menu</h2><br/>
+                    <MenuDisplay menudata={this.state.menuList} finalOrder={(data) => this.addToCart(data)}/>
                 </div>
             </div>
         </>
