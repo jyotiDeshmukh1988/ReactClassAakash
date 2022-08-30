@@ -27,8 +27,9 @@ class PlaceOrder extends Component{
 
     handleCheckout = () => {
         let obj = this.state;
-        obj.menuItem = sessionStorage.getItem('menu');
-        console.log("myobj"+obj.menuItem);
+        console.log("before",obj);
+       obj.menuItem = sessionStorage.getItem('menu');
+        console.log("after",obj);
         fetch(placeOrder,{
             method:'POST',
             headers: {
@@ -121,7 +122,7 @@ class PlaceOrder extends Component{
         })
         .then((res) => res.json())
         .then((data) => {
-            //console.log(data)
+            console.log("hh",data)
             let totalPrice = 0;
             data.map((item) => {
                 totalPrice = totalPrice + Number(item.menu_price);

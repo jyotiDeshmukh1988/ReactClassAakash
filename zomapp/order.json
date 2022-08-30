@@ -59,6 +59,128 @@
       "phone": 87867678,
       "address": "YRT 45/13",
       "menuItem": "3,5"
+    },
+    {
+      "id": 21314,
+      "hotel_name": "AMA Cafe",
+      "name": "Priya",
+      "email": "Priya@gmail.com",
+      "cost": 369,
+      "phone": "990067890",
+      "address": "Nisarg Serene",
+      "menuItem": "30,32"
+    },
+    {
+      "id": 53298,
+      "hotel_name": "Cafe Wink",
+      "name": "Nikita",
+      "email": "Nikki@gmail.com",
+      "cost": 420,
+      "phone": 87867678,
+      "address": "YRT 45/13",
+      "menuItem": "57,58"
+    },
+    {
+      "id": 15450,
+      "hotel_name": "Burger King",
+      "name": "Prince Charming",
+      "email": "prince@gmail.com",
+      "cost": 229,
+      "phone": "8786767878",
+      "address": "YRT 45/13",
+      "menuItem": [
+        {
+          "_id": "6187768162a1816f88594de5",
+          "menu_id": 52,
+          "menu_name": "Cheese Melt Down Burger",
+          "description": "Cheese oozing spicy veg patty, veggies and creamy sauce. An indulgent treat from our King's Collection!",
+          "restaurant_id": 11,
+          "menu_image": "https://b.zmtcdn.com/data/dish_photos/5a9/10759d3aaa3f99219c916c9efd9195a9.jpg",
+          "menu_type": "vegetarian",
+          "menu_price": "169"
+        },
+        {
+          "_id": "6187768162a1816f88594de8",
+          "menu_id": 55,
+          "menu_name": "Veg Crunchy Volcano",
+          "description": "Be ready for a crunchy, saucy, explosion. A crunchy volcano shell filled with beans & veg mix, chef's secret sauce, fresh onion & crisp lettuce.",
+          "restaurant_id": 11,
+          "menu_image": "https://b.zmtcdn.com/data/dish_photos/af9/b871732b39c98fc8f26f9044c1afeaf9.jpg",
+          "menu_type": "vegetarian",
+          "menu_price": "60"
+        }
+      ]
+    },
+    {
+      "id": 7319,
+      "hotel_name": "Burger King",
+      "name": "test",
+      "email": "test@gmail.com",
+      "cost": 229,
+      "phone": "8786767823",
+      "address": "YRT 45/13",
+      "menuItem": "52,55"
+    },
+    {
+      "id": 19158,
+      "hotel_name": "Burger King",
+      "name": "Nikita",
+      "email": "Nikki@gmail.com",
+      "cost": 557.14,
+      "phone": 87867678,
+      "address": "YRT 45/13",
+      "menuItem": [
+        {
+          "_id": "6187768162a1816f88594de5",
+          "menu_id": 52,
+          "menu_name": "Cheese Melt Down Burger",
+          "description": "Cheese oozing spicy veg patty, veggies and creamy sauce. An indulgent treat from our King's Collection!",
+          "restaurant_id": 11,
+          "menu_image": "https://b.zmtcdn.com/data/dish_photos/5a9/10759d3aaa3f99219c916c9efd9195a9.jpg",
+          "menu_type": "vegetarian",
+          "menu_price": "169"
+        },
+        {
+          "_id": "6187768162a1816f88594de7",
+          "menu_id": 54,
+          "menu_name": "Crispy Veg Combo",
+          "description": "Our best-selling burger with crispy veg patty, fresh onion and our signature sauce. Comes with Fries + Exclusive Pepsi.",
+          "restaurant_id": 11,
+          "menu_image": "https://b.zmtcdn.com/data/dish_photos/135/b2a0cc85a53134ba273cc30efdb00135.jpg",
+          "menu_type": "vegetarian",
+          "menu_price": "209.14"
+        },
+        {
+          "_id": "6187768162a1816f88594de6",
+          "menu_id": 53,
+          "menu_name": "Crispy Chicken Burger",
+          "description": "Our best-selling burger with crispy chicken patty, fresh onion and our signature sauce.",
+          "restaurant_id": 11,
+          "menu_image": "https://b.zmtcdn.com/data/dish_photos/e6b/251f04208ee79ba396b192d87a7abe6b.jpg",
+          "menu_type": "non-vegetarian",
+          "menu_price": "80"
+        },
+        {
+          "_id": "6187768162a1816f88594de4",
+          "menu_id": 51,
+          "menu_name": "King Fries",
+          "description": "The perfect crispy partner.",
+          "restaurant_id": 11,
+          "menu_image": "https://b.zmtcdn.com/data/dish_photos/2dc/7d31d7425ab6de31e2e92806561352dc.jpg",
+          "menu_type": "vegetarian",
+          "menu_price": "99"
+        }
+      ]
+    },
+    {
+      "id": 98804,
+      "hotel_name": "Burger King",
+      "name": "Nikita",
+      "email": "Nikki@gmail.com",
+      "cost": 557.14,
+      "phone": 87867678,
+      "address": "YRT 45/13",
+      "menuItem": "54,52,51,53"
     }
   ]
 }
