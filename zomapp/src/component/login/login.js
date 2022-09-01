@@ -1,6 +1,6 @@
 
 import React,{Component} from 'react';
-
+import Header from '../../Header';
 const url = "https://developerjwt.herokuapp.com/api/auth/login";
 
 class Login extends Component{
@@ -45,6 +45,8 @@ class Login extends Component{
 
     render(){
         return(
+            <>
+            <Header/>
            <div className="container">
                <div className="panel panel-success">
                    <div className="panel-heading">
@@ -71,6 +73,7 @@ class Login extends Component{
                    </div>
                </div>
             </div>
+            </>
         )
     }
 }

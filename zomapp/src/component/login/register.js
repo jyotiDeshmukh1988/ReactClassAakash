@@ -1,17 +1,17 @@
-
 import React,{Component} from 'react';
+import Header from '../../Header';
+const url = "https://developerjwt.herokuapp.com/api/auth/register";
 
-const url = "https://developerjwt.herokuapp.com/api/auth/login";
-
-class Login extends Component{
+class Register extends Component{
 
     constructor(props){
         super(props)
 
         this.state={
+            name:'Nikita',
             email:'Nikki@gmail.com',
             password:'12345678',
-            message:''
+            phone:87867678
         }
     }
 
@@ -19,8 +19,7 @@ class Login extends Component{
         this.setState({[event.target.name]:event.target.value})
     }
 
-    handleLogin = (event) => {
-        event.preventDefault();
+    handleCheckout = () => {
         fetch(url,{
             method:'POST',
             headers: {
@@ -29,31 +28,27 @@ class Login extends Component{
             },
             body:JSON.stringify(this.state)
         })
-        .then((res) => res.json())
-        .then((data) =>{
-           console.log(data);
-           if(data.auth === false){
-            this.setState({message:data.token});
-           }
-           else{
-            sessionStorage.setItem('ltk',data.token);
-            this.props.history.push(`/profile/`);
-           }
-        })
+        // .then(console.log('hiii'))
+        .then(this.props.history.push(`/`))
     }
 
 
     render(){
         return(
+            <>
+                <Header/>
            <div className="container">
-               <div className="panel panel-success">
+               <div className="panel panel-primary">
                    <div className="panel-heading">
-                    <h3>Login</h3>
+                    <h3>Register</h3>
                    </div>
                    <div className="panel-body">
-                   <h3 style={{color: 'red'}}>{this.state.message}</h3>
-                       <form>
                            <div className="row">
+                                 <div className="form-group col-md-6">
+                                    <label>Name</label>
+                                    <input className="form-control" name="name"
+                                    value={this.state.name} onChange={this.handleChange}/>
+                                </div>
                                 <div className="form-group col-md-6">
                                     <label>Email</label>
                                     <input className="form-control" name="email"
@@ -64,15 +59,20 @@ class Login extends Component{
                                     <input className="form-control" name="password"
                                     value={this.state.password} onChange={this.handleChange}/>
                                 </div>
-
+                                <div className="form-group col-md-6">
+                                    <label>Phone</label>
+                                    <input className="form-control" name="phone"
+                                    value={this.state.phone} onChange={this.handleChange}/>
+                                </div>
+                               
                            </div>
-                           <button className="btn btn-success" onClick={this.handleLogin} >Login</button>
-                       </form>
+                           <button className="btn btn-success" onClick={this.handleCheckout} >Register</button>
                    </div>
                </div>
             </div>
+            </> 
         )
     }
 }
 
-export default Login;
+export default Register;
