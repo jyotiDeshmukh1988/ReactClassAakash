@@ -181,6 +181,26 @@
       "phone": 87867678,
       "address": "YRT 45/13",
       "menuItem": "54,52,51,53"
+    },
+    {
+      "id": 77513,
+      "hotel_name": "Chandni Chowk 2 Bangalore",
+      "name": "Nikita",
+      "email": "Nikki@gmail.com",
+      "cost": 333.45,
+      "phone": "87867678",
+      "address": "YRT 45/13",
+      "menuItem": "63,65"
+    },
+    {
+      "id": 26164,
+      "hotel_name": "Cafe Wink",
+      "name": "Jyoti",
+      "email": "jyoti@gmail.com",
+      "cost": 420,
+      "phone": "8786767878",
+      "address": "YRT 45/13",
+      "menuItem": "57,58"
     }
   ]
 }

@@ -37,7 +37,7 @@ class Login extends Component{
            }
            else{
             sessionStorage.setItem('ltk',data.token);
-            this.props.history.push(`/profile/`);
+            this.props.history.push(`/`);
            }
         })
     }

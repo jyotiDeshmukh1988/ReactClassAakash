@@ -23,7 +23,8 @@ class Details extends Component {
     }
     
     addToCart = (data) => {
-        this.setState({userItem:data})
+        this.setState({userItem:data});
+        sessionStorage.setItem('menu',this.state.userItem);
     }
 
     proceed =() => {

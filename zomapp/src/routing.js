@@ -7,7 +7,8 @@ import Details from './component/details/restDisplay';
 import PlaceOrder from './component/booking/placeOrder';
 import ViewBooking from './component/booking/viewOrder';
 import Login from './component/login/login';
-import Register from './component/register/register';
+import Register from './component/login/register';
+import Cart from './component/booking/Cart';
 
 const Routing = () => {
     return(
@@ -19,6 +20,7 @@ const Routing = () => {
             <Route path="/viewBooking/" component={ViewBooking}/>
             <Route path="/login/" component={Login}/>
             <Route path="/register/" component={Register}/>
+            <Route path="/cart/" component={Cart}/>
             <Footer year="2022" month="August"/>
         </BrowserRouter>
     )

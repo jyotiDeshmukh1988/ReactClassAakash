@@ -8,9 +8,10 @@ class ViewOrder extends Component{
 
     constructor(props){
         super(props)
-
+        let email = sessionStorage.getItem('userInfo')?sessionStorage.getItem('userInfo').split(',')[1]:'';
         this.state={
-            orders:''
+            orders:'',
+            email: email
         }
     }
 
@@ -24,7 +25,8 @@ class ViewOrder extends Component{
     }
 
     componentDidMount(){
-        axios.get(`${placeOrder}`).then((res) => {this.setState({orders:res.data})})
+        console.log(">>>>",this.state.email)
+        axios.get(`${placeOrder}?email=${this.state.email}`).then((res) => {this.setState({orders:res.data})})
     }
 }
 
