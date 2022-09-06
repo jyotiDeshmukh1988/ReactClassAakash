@@ -1,14 +1,15 @@
 import React,{Component} from 'react';
 import './Search.css';
+import { withRouter } from 'react-router-dom';
 
 const lurl = "https://zomatoajulypi.herokuapp.com/location";
 const restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?stateId="
 
 class Search extends Component {
 
-    constructor(){
+    constructor(props){
         //console.log('>>>>>>>inside constructor');
-        super();
+        super(props);
         this.state = { // define state object
             location:'',
             restData:''
@@ -21,6 +22,12 @@ class Search extends Component {
         .then(data => this.setState({restData:data}))
         .catch(err => console.log(err));
     }
+
+    handleRest = (event) => {
+        console.log('>>>>>>>inside search',this.props);
+        this.props.history.push(`/details?restId=${event.target.value}`);
+    }
+
     renderCity = (data) => {
         if(data){
         return data.map((item) =>{
@@ -54,7 +61,7 @@ class Search extends Component {
                         <option>----SELECT LOCATION----</option>
                         {this.renderCity(this.state.location)}
                     </select>
-                    <select id="restSelect">
+                    <select id="restSelect" onChange={this.handleRest}>
                         <option>----SELECT Restaurants----</option>
                         {this.renderRest(this.state.restData)}
                     </select>
@@ -75,7 +82,7 @@ class Search extends Component {
         .catch(err => console.log(err));    
     }
 }
-export default Search;
+export default withRouter(Search);
 
 /* In class component first constructor called then render method then componentDidMount. Will call the api on the componentdidmount lifecycle*/
 

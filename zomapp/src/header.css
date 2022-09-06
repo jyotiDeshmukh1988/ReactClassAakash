@@ -14,11 +14,16 @@ header{
 #brand{
     font-size:30px;
     color:white;
-    margin-left:1%;
-    margin-top:1%;
+    margin-left:0.5%;
+    margin-top:0.5%;
     float: left;
 }
-
+#brand a{
+    color:#fff;
+}
+#brand a:hover{
+    text-decoration: none;
+}
 #social{
     display: inline-block;
     margin-top: 10px;

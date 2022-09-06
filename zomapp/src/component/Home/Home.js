@@ -2,7 +2,8 @@ import React from 'react';
 import Search from './Search';
 import QuickSearch from './QuickSearch';
 import Header from '../../Header';
-const Home = () => {
+const Home = (props) => {
+  console.log('>>>>>>>inside home',props);
     return (
         <React.Fragment>
           <Header/>
