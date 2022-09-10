@@ -21,7 +21,6 @@ const ListingDisplay = (props) =>{
                                     </Link>
                                 </div>
                                 <div className="city_name">{item.address}</div>
-                                <div className="city_name">{item.rating_text}</div>
                                 <div className="city_name">Rs. {item.cost}</div>
                                 <div className="labelDiv">
                                 {item.mealTypes.map((mealitem)=>{

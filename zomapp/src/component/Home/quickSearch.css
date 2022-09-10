@@ -6,18 +6,18 @@
 }
 
 #QuickHeading{
-    color:#3b2632;
-    display:block;
-    font-size:30px;
-    font-weight:bold;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-left:1%
+    color: #b54893;
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 1%;
+    text-transform: uppercase;
 }
 
 #QuickSubHeading{
     line-height:3;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    color:gray;
+    color: #3e3030;
     font-size:20px;
     position:absolute;
     margin-left:1%
@@ -29,7 +29,7 @@
     display:inline-block;
     margin-top:5%;
     margin-left:1%;
-    box-shadow: 10px 20px 10px #3b2632;
+    box-shadow: 5px 5px 5px #9c8989;
 }
 
 .tileComponent1{
@@ -46,12 +46,14 @@
     width:45%;
     float:left;
     margin-left: 3%;
-    margin-top: 13%;
+    margin-top: 7%;
 }
 
 .componentHeading{
-    color:#3b2632;
+    color: #b54893;
     font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .componentHeading a{
@@ -59,6 +61,7 @@
 }
 
 .componentSubHeading{
-    color:gray;
-    font-size: 20px;
+    color: #3e3030;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
