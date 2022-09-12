@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import Header from '../../Header';
-const url = "http://zomatoajulypi.herokuapp.com/menuItem";
+const url = "https://zomatoajulypi.herokuapp.com/menuItem";
 class Cart extends Component {
     constructor(props){
         super(props);
